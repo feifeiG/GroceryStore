@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package common.protobuf;
+import "Data.proto";
+
+message CSLogin {
+	string uid = 1;
+}
+
+message CSCreatePlayer{
+	string uid = 1;
+	string name = 2;
+}
+
+message CSLoadPlayer{
+	string uid = 1;
+	int32 player_id = 2;
+}
+
+
+message SCLogin{
+	int32 code = 1;
+}
+
+message SCPlayerList{
+	PlayerList player_list = 1;
+}
+
+message SCPlayerInfo{
+	PlayerStruct player_struct = 1;
+}

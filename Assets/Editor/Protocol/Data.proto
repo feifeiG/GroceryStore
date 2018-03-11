@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package common.protobuf;
+
+message CommonData {
+	int32 max_player_id = 1;
+	map<string, PlayerList> uid_to_playerlist = 2;
+}
+
+message PlayerList{
+	repeated int32 id_list = 1;
+}
+
+message PlayerStruct {
+	ItemData item_data = 1;
+}
+
+message ItemData {
+	int32 grid = 1;
+	map<string, int32> item_list = 2;
+}
