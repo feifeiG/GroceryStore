@@ -23,19 +23,19 @@ public class DataTool {
 
     public static void SavePlayer(int player_id, PlayerStruct player_struct)
     {
-        //FileStream file = File.Create(PathTool.GetPlayerSavePath(player_id));
+        //FileStream fs = File.Create(PathTool.GetPlayerSavePath(player_id));
         //BinaryFormatter bf = new BinaryFormatter();
-        //bf.Serialize(file, player_struct);
+        //bf.Serialize(fs, player_struct);
         //file.Close();
 
 
         //string json = SaveAsJSON(player_struct);
         //LogTool.Tip("player_id:" + player_id + " SavePlayer JSON: " + json);
 
-        //FileStream file = File.Create(PathTool.GetPlayerSavePath(player_id));
-        //byte[] bts = System.Text.Encoding.UTF8.GetBytes(json);
-        //file.Write(bts, 0, bts.Length);
-        //file.Close();
+        //FileStream fs = File.Create(PathTool.GetPlayerSavePath(player_id));
+        //byte[] bytes = System.Text.Encoding.UTF8.GetBytes(json);
+        //fs.Write(bytes, 0, bytes.Length);
+        //fs.Close();
 
         LogTool.Tip(PathTool.GetPlayerSavePath(player_id));
         Common.Protobuf.PlayerStruct mPlayerStruct = new Common.Protobuf.PlayerStruct();
@@ -55,14 +55,14 @@ public class DataTool {
         string save_path = PathTool.GetPlayerSavePath(player_id);
         if (PathTool.IsExistFile(save_path))
         {
-            //FileStream file = File.Open(save_path, FileMode.Open);
+            //FileStream fs = File.Open(save_path, FileMode.Open);
             //BinaryFormatter bf = new BinaryFormatter();
-            //PlayerStruct player_struct = (PlayerStruct)bf.Deserialize(file);
+            //PlayerStruct player_struct = (PlayerStruct)bf.Deserialize(fs);
             //file.Close();
 
 
-            //FileStream file = File.Open(save_path, FileMode.Open);
-            //StreamReader sr = new StreamReader(file);
+            //FileStream fs = File.Open(save_path, FileMode.Open);
+            //StreamReader sr = new StreamReader(fs);
             //string json = sr.ReadToEnd();
             //LogTool.Tip("player_id:" + player_id + " LoadPlayer JSON: " + json);
 
